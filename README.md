@@ -1,4 +1,3 @@
-# GUI-Development-with-flask-and-dash
 # Web UI Development with Flask and Dash 
 
 To get started first run install_dependencies.py to install all the necessary packages required.The application uses flask as a backend server and dash/plotly for interactive EDA.Ther server is contained in server.py and the routing as well as the dash apps are handled by main.py which imports other dash apps [app.py & app8.py]. In order to run the whole application after running install_dependencies.py ,run main.py the dashboard is hosted at http://127.0.0.1:5000/dashboard/ where as other apps are hosted respectively at 
