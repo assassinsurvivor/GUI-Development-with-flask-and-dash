@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Cervical Cancer Screening</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 170%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.overlayy {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 320%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.overlayyy {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 450%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.container:hover .overlayy {
+  opacity: 1;
+}
+
+.container:hover .overlayyy {
+  opacity: 1;
+}
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+divslang {
+    width: 150px;
+    padding: 10px;
+    border: 5px solid black;
+    margin: 0;
+}
+
+
+</style>
+
+</head>
+
+<header>
+<div class="navbar-header">
+<a class="navbar-brand" href="/">
+<img style="max-width:50px;max-height:20px margin-top: -7px;" src="{{ url_for('static', filename='images/mainlogo.png') }}">
+</a>
+</div>
+
+
+<div class = "container-fluid">
+<a href="/dashboard/"><button type="button" class="btn btn-primary" aria-label="Left Align" style="margin-top: 22px;">
+<span class="glyphicon glyphicon-off" aria-hidden="true"></span> Cervical Cancer Screening App
+</button></a>
+
+
+
+<ul class="nav navbar-nav navbar-right">
+<div style="margin-right: 10px; margin-left: 15px; margin-top: 5px; margin-bottom: 5px;"  class="container-fluid">
+<a href="#"> <span class="glyphicon glyphicon-triangle-right"></span> PLD   </a>
+</ul>
+</div>
+</header>
+
+<body>
+
+<div class="border-row" style="width:100%;margin-bottom: 15px;"></div>
+<div class="container-fluid" style="min-height:100%">
+
+{% block body %}{% endblock %}
+</div>
+
+
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+</body>
+
+</html>

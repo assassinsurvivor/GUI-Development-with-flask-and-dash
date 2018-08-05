@@ -1,0 +1,171 @@
+{% extends "header.html" %}
+
+{% block body %}
+
+
+
+
+<div role="tabpanel">
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+    
+<li role="presentation" class="active"><a href="#t-SNE" aria-controls="t-SNE" role="tab" data-toggle="tab">NN Model Performance</a></li>
+<li role="presentation"><a href="#modeltraining" aria-controls="modeltraining" role="tab" data-toggle="tab">NN Model Architecture </a></li>
+<li role="presentation"><a href="#xgboost" aria-controls="xgboost" role="tab" data-toggle="tab">XGBoost </a></li>
+	
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane fade in active" id="t-SNE">
+
+<br>
+<br>
+
+<ul class="nav nav-pills nav-stacked">
+<li class="active"><a target="_blank" href="#">CNN</a></li>
+</ul>
+ 
+<div class="row">
+<div class="column">
+<div class="container">
+<img style="margin-left:14px;align:right;max-width:1400px;max-height:1400px margin-top: -10px;" src="{{ url_for('static', filename='images/CNN Accuracy.png') }}" alt="Avatar" class="image">
+<div class="overlay">
+    <div class="text">CNN Accuracy:0.62</div>
+</div>
+</div>
+</div>
+
+<div class="column">
+<div class="container">
+<img style="margin-left:14px;align:right;max-width:1400px;max-height:1400px ;" src="{{ url_for('static', filename='images/CNN Loss.png') }}" alt="Avatar" class="image">
+<div class="overlay">
+    <div class="text">CNN Loss:0.65</div>
+</div>
+</div>
+</div>
+</div>
+ 
+<br>
+<br>
+
+<ul class="nav nav-pills nav-stacked">
+<li class="active"><a target="_blank" href="#">LSTM & DNN</a></li>
+</ul>
+
+<div class="row">
+<div class="column">
+<div class="container">
+<img style="margin-left:14px;align:right;max-width:1400px;max-height:1400px margin-top: -10px;" src="{{ url_for('static', filename='images/LSTM Performance.png') }}" alt="Avatar" class="image">
+<div class="overlay">
+    <div class="text">LSTM Performance  ROC:0.78    F1:0.74</div>
+</div>
+</div>
+</div>
+<div class="column">
+<div class="container">
+<img style="margin-left:14px;align:right;max-width:1400px;max-height:1400px ;" src="{{ url_for('static', filename='images/DNN Performance.png') }}" alt="Avatar" class="image">
+<div class="overlay">
+    <div class="text">DNN Performance  ROC:0.89     F1:0.83</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div role="tabpanel" class="tab-pane fade in active" id="modeltraining">
+
+<br>
+<br>
+
+<ul class="nav nav-pills nav-stacked">
+<li class="active"><a target="_blank" href="#">CNN</a></li>
+</ul>
+<div class="row">
+<div class="column">
+<div class="container">
+<img style="margin-left:14px;align:right;max-width:1400px;max-height:1400px margin-top: -10px;" src="{{ url_for('static', filename='images/CNN Architecture.png') }}" alt="Avatar" class="image">
+<div class="overlayy">
+    <div class="text">CNN Architecture</div>
+</div>
+</div>
+</div>
+</div>
+
+<br>
+<br>
+<ul class="nav nav-pills nav-stacked">
+<li class="active"><a target="_blank" href="#">LSTM</a></li>
+</ul>
+<div class="row">
+<div class="column">
+<div class="container">
+<img style="margin-left:14px;align:right;max-width:1400px;max-height:1400px margin-top: -10px;" src="{{ url_for('static', filename='images/LSTM Architecture.png') }}" alt="Avatar" class="image">
+<div class="overlayy">
+    <div class="text">LSTM Architecture</div>
+</div>
+</div>
+</div>
+</div>
+ 
+ <ul class="nav nav-pills nav-stacked">
+<li class="active"><a target="_blank" href="#">DNN</a></li>
+</ul>
+<div class="row">
+<div class="column">
+<div class="container">
+<img style="margin-left:14px;align:right;max-width:1400px;max-height:1400px margin-top: -10px;" src="{{ url_for('static', filename='images/DNN Architecture.png') }}" alt="Avatar" class="image">
+<div class="overlayy">
+    <div class="text">DNN Architecture</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div role="tabpanel" class="tab-pane fade in active" id="xgboost">
+
+<br>
+<br>
+
+<ul class="nav nav-pills nav-stacked">
+<li class="active"><a target="_blank" href="#">XGBoost</a></li>
+</ul>
+<div class="row">
+<div class="column">
+<div class="container">
+<img  src="{{ url_for('static', filename='images/xgboost.png') }}" align="center-right" alt="Avatar" class="center">
+<div class="overlay">
+    <div class="text">ROC:87 and F1:0.78</div>
+</div>
+</div>
+</div>
+</div>
+
+
+ 
+ <ul class="nav nav-pills nav-stacked">
+<li class="active"><a target="_blank" href="#">Features</a></li>
+</ul>
+<div class="row">
+<div class="column">
+<div class="container">
+<img style="margin-left:14px;align:right;max-width:1400px;max-height:1400px margin-top: -10px;" src="{{ url_for('static', filename='images/download.png') }}" alt="Avatar" class="image">
+<div class="overlayyy">
+    <div class="text">Most Important Features</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<br>
+<br>
+</div>
+</div>
+
+{% endblock %}
+ 

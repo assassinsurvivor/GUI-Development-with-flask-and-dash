@@ -1,0 +1,98 @@
+{% extends "header.html" %}
+
+{% block body %}
+
+<div role="tabpanel">
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    
+	<li role="presentation" class="active"><a href="#t-SNE" aria-controls="t-SNE" role="tab" data-toggle="tab">EDA</a></li>
+    <li role="presentation"><a href="#modeltraining" aria-controls="modeltraining" role="tab" data-toggle="tab">Model Training</a></li>
+	
+  </ul>
+
+  <!-- Tab panes -->
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane fade in active" id="t-SNE">
+ 
+ 
+  
+
+	   {% for t in TOPIC_DICT["t-SNE"] %}
+	    <a target="_blank"  href="{{t[1]}}"><img style="margin-left:10px;align:right;max-width:1400px;max-height:1400px margin-top: -7px;" src="{{ url_for('static', filename='images/cap.png') }}">	
+	   {% endfor %}</a>
+<br>
+<br>
+<br>
+<br>
+
+<ul class="nav nav-pills nav-stacked">
+
+{% for t in TOPIC_DICT["t-SNE"] %}
+<li class="active"><a target="_blank" href="{{t[1]}}">t-SNE</a></li>
+{% endfor %}</a>
+
+{% for t in TOPIC_DICT["EDA"] %}
+<li><a target="_blank" href="{{t[1]}}">EDA</a></li>
+{% endfor %}</a>
+
+  
+</ul>
+	
+  </div>
+  
+  
+  <div role="tabpanel" class="tab-pane fade" id="EDA">
+  <h1 align="center">Exploratory Data Analysis</h1> 
+  <p> EDA was carried out at the time of modelling to understand the relationship between patient demographic, patient history data and the corresponding screening label.Volumetric
+  Analysis was done using all categorical, Numerical data features which can be applied for both uni-variate and bi-variate analysis.
+
+</p>
+  
+
+	   {% for t in TOPIC_DICT["EDA"] %}
+	    <a target="_blank"  href="{{t[1]}}"><img style="margin-left:10px;align:right;max-width:1400px;max-height:1400px margin-top: -7px;" src="{{ url_for('static', filename='images/cap1.png') }}">	
+	   {% endfor %}</a>
+	
+  </div>
+  
+  
+  
+  
+  <div role="tabpanel" class="tab-pane fade" id="modeltraining">
+  
+<br>
+<br>
+
+  {% for t in TOPIC_DICT["modeltraining"] %}
+<ul class="nav nav-pills nav-stacked">
+<li class="active"><a target="_blank" href="{{t[1]}}">Model Metrics</a></li>
+</ul>
+ 
+	    <a target="_blank"  href="{{t[1]}}"><img style="margin-left:10px;align:right;max-width:1400px;max-height:1400px margin-top: -7px;" src="{{ url_for('static', filename='images/newplot.png') }}">	
+		{% endfor %}</a>
+  
+  
+  
+  
+  </div>
+  
+  <div role="tabpanel" class="tab-pane fade" id="data">
+  
+
+  {% for t in TOPIC_DICT["dataexp"] %}
+	    <a target="_blank"  href="{{t[1]}}"><img style="align:right;margin-left:10px;align:right;max-width:1400px;max-height:1400px margin-top: -7px;" src="{{ url_for('static', filename='images/cap4.png') }}">	
+		{% endfor %}</a>
+  
+  
+  
+  
+  </div>
+
+</div>
+
+</div>
+
+{% endblock %}
+ 
