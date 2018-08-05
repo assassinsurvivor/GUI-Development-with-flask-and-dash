@@ -9,10 +9,16 @@ http://127.0.0.1:5000/app8
 
 You can handle dash apps using flask just by calling the constructor function in the dash app by ```app=dash.Dash(name='app7', sharing=True, server=server, url_base_pathname='/app8')``` where server is the flask server that was created to handle all the apps. 
 
-
+# Dashboard
 ![animated1](shots/image_1.png)
+
+# Model Performance
 ![animated1](shots/image_2.png)
+
+# T-SNE EDA
 ![animated1](shots/image_3.png)
+
+# EDA
 ![animated1](shots/image_4.png)
 
 
